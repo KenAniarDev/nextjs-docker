@@ -40,9 +40,11 @@ pipeline {
                 echo 'Deploying Next.js application...'
                 script {
                     // Run your Docker container here with necessary configurations
-//                     dockerImage.inside('-p 8080:8080') {
-//                         sh 'npm install && npm start'
-//                     }
+                    /*
+                    dockerImage.inside('-p 8080:8080') {
+                        sh 'npm install && npm start'
+                    }
+                    */
                 }
             }
         }
