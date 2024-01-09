@@ -16,10 +16,10 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 echo 'Building Docker image...'
-//                 script {
-//                     // Assuming your Dockerfile is in the root of your repository
-//                     dockerImage = docker.build("nextjs-docker:${env.BUILD_NUMBER}")
-//                 }
+                script {
+                    // Assuming your Dockerfile is in the root of your repository
+                    sh 'docker build -t nextjs-docker:1.2 .'
+                }
             }
         }
 
