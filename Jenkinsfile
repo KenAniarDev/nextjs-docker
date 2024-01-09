@@ -18,7 +18,7 @@ pipeline {
                 echo 'Building Docker image...'
                 script {
                     // Assuming your Dockerfile is in the root of your repository
-                    sh 'docker build -t nextjs-docker:1.2 .'
+                    dockerImage = docker.build("nextjs-docker:1.2")
                 }
             }
         }
